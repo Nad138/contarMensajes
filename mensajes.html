@@ -12,27 +12,26 @@
 	<p id="parrafo">Culpa placeat cum enim inventore asperiores unde sit fugiat ea aliquam modi esse nostrum magni, eum, repellendus sint at aperiam hic dolorum!</p>
 	<span class="mensaje"></span>
 	<img src="http://lorempixel.com/output/city-q-c-301-301-9.jpg" alt="" class="mensaje">
-<div>
-	<span id="totalMensajes"></span>
+<div><br>
+	<span id="totalMensajes">HOLA HOLA</span>
 </div>
 
 	<script>
 function contar(){
-		var mensajes = document.getElementsByClassName('mensaje');
-    var total = document.getElementById('totalMensajes').innerHTML;
+		var mensajes = document.getElementsByClassName('mensaje').length;
+    /*var total = document.getElementById('totalMensajes').innerHTML;*/
 
-	/*if(mensajes.length == 1){
-		total = "Es muy poco";
+	 if(mensajes == 1){
+		document.getElementById('totalMensajes').innerHTML = "<strong>Es muy poco</strong>";
+      }
+  else if (mensajes >= 2 && mensajes < 4){
+	  document.getElementById('totalMensajes').innerHTML = "<strong>No está mal</strong>";
+      }
+	else if(mensajes >= 4){
+		document.getElementById('totalMensajes').innerHTML = "<strong>Son muchos!</strong>";
+		   }
 }
-else if (mensajes.length >= 2 && mensajes.length < 4){
-	total = "No está mal";
-}
-		else if(mensajes.length >= 4){
-			total = "Son muchos!";
-		}
-
-		}
-		console.log(contar());
+		contar();
 
 	</script>
 </body>
